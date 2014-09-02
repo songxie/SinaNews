@@ -41,7 +41,8 @@
   
   self.window.rootViewController = self.mainViewController;
  
-
+#pragma mark 开始进行修改了
+    
   [self.window makeKeyAndVisible];
   return YES;
 }
