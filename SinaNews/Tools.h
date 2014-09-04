@@ -25,5 +25,9 @@
 /**
  * @brief 创建制定长度和宽度的图片
  */
-+(UIImage *)compressImage:(UIImage *)imgSrc bySpecifiedWidth:(int)width andHeight:(int)height;
++(UIImage *)compressImage:(UIImage *)imgSrc bySpecifiedWidth:(int)width andHeight:(int)height andColor:(UIColor *)color;
+
+/*多添加图片颜色* lin*/
++(UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
+
 @end

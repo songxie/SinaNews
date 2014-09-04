@@ -30,16 +30,17 @@
         // Custom initializatio
       self.categoryArray = [[NSMutableArray alloc] init];
       
-      //开始初始化分类
+      //开始初始化分类,分类的名字
       NSArray *catNameArray = [[NSArray alloc] initWithObjects:@"国内",@"国际",@"图片",@"社会",@"探索",@"军事",@"评论",nil];
-      
+      //图片添加一个小老鼠2x这种代表什么意思呢
       NSArray *catThumbArray = [[NSArray alloc] initWithObjects:@"toutiao@2x.png",@"yule@2x",@"tupian@2x",@"boke@2x",@"keji@2x",@"caijing@2x",@"tiyu@2x",nil];
       
-      for (int i=0;i<[catNameArray count];i++)
+      for (int i = 0;i<[catNameArray count];i++)
       {
         NSDictionary *catDic = [NSDictionary dictionaryWithObjectsAndKeys:[catNameArray objectAtIndex:i],@"title",[catThumbArray objectAtIndex:i],@"thumb",nil];
         NewsCategoryObject *catObject = [[NewsCategoryObject alloc]initWithDictionary:catDic];
         [self.categoryArray addObject:catObject];
+      //相当于内存的释放，创建成字典，接着创建对象包含一个字典
         catDic = nil;catObject = nil;
       }
       

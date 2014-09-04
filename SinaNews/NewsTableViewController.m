@@ -41,6 +41,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        //委托和初始化控件全部放置在这里边
       self.typeName =@"";
       
       self.newsListTable = [[PullTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];

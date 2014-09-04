@@ -38,7 +38,7 @@
   //初始化新闻控制器
   self.mainViewController.centerPanel = [[NewsViewController alloc] initWithRootViewController:table];
   
-  
+ //表视图为新闻内容或者类表使用，新闻控制类的情况暂时不明朗
   self.window.rootViewController = self.mainViewController;
  
 #pragma mark 开始进行修改了

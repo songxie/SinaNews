@@ -41,20 +41,34 @@
 }
 
 /**
- * @brief 创建制定长度和宽度的图片
+ * @brief 创建制定长度和宽度和颜色的图片
  */
-+(UIImage *)compressImage:(UIImage *)imgSrc bySpecifiedWidth:(int)width andHeight:(int)height
++(UIImage *)compressImage:(UIImage *)imgSrc bySpecifiedWidth:(int)width andHeight:(int)height andColor:(UIColor *)color
 {
   CGSize size = {width, height};
   UIGraphicsBeginImageContext(size);
   CGRect rect = {{0,0}, size};
   [imgSrc drawInRect:rect];
+  CGContextRef context = UIGraphicsGetCurrentContext();
+  CGContextSetFillColorWithColor(context, [color CGColor]);
+  CGContextFillRect(context, rect);
   UIImage *compressedImg = UIGraphicsGetImageFromCurrentImageContext();
   UIGraphicsEndImageContext();
   return compressedImg;
 }
 
-
+/*IOS常用代码，（创建图片，指定颜色和大小）*/
++ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
 @end
 
 
