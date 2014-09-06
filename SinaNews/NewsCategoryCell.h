@@ -10,8 +10,8 @@
 
 @interface NewsCategoryCell : UITableViewCell
 
-@property (retain,nonatomic) UIImageView *categoryThumb;
+@property (retain,nonatomic) UIImageView *categoryThumb;//类目的图片
 
-@property (retain,nonatomic) UILabel *categoryName;
+@property (retain,nonatomic) UILabel *categoryName;     //类目的名字
 
 @end

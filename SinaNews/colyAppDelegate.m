@@ -28,22 +28,21 @@
   //引入新闻分类控制器，控制器进行左右的添加
   self.mainViewController.leftPanel = [[NewsCategoryViewController alloc] init];
     
-  //初始化新闻列表table,什么国际，社会，评论之类的来着
-  NewsTableViewController *table = [[NewsTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
-  //设置默认分类，一开始就进去图片区域来处理
-  table.typeName = defaultTypeName;
+#pragma mark 中心新闻控制器的产生，就是具体的新闻列表外带UITabView的这类的东西，NewTableViewController
+    //初始化新闻列表table,什么国际，社会，评论之类的来着，进行加装或者说是初始化
+    NewsTableViewController *table = [[NewsTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
-    
-#pragma mark 中心新闻控制器的产生，就是具体的新闻列表，这个也有UITabView的这类的东西
-  //初始化新闻控制器
-  self.mainViewController.centerPanel = [[NewsViewController alloc] initWithRootViewController:table];
+    //设置默认分类，一开始就进去图片区域来处理
+    table.typeName = defaultTypeName;
+    //初始化新闻控制器
+    self.mainViewController.centerPanel = [[NewsViewController alloc] initWithRootViewController:table];
   
  
-  self.window.rootViewController = self.mainViewController;
+    self.window.rootViewController = self.mainViewController;
      
-  [self.window makeKeyAndVisible];
-  return YES;
+    [self.window makeKeyAndVisible];
+    return YES;
 }
 
 

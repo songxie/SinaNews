@@ -20,7 +20,7 @@
 
 
 @interface NewsTableViewController ()<UITableViewDataSource, UITableViewDelegate, PullTableViewDelegate>
-
+#pragma mark int 的类型采用assign
 //当前页数
 @property (assign, nonatomic) int page;
 
@@ -72,7 +72,7 @@
 {
   [super viewDidLoad];
 
-  //初始化新闻数组
+  //初始化新闻数组，数组一定要进行初始化，alloc 或者 new 之类的
   self.newsListArray = [NSMutableArray new];
 }
 
@@ -94,27 +94,55 @@
     }
     self.isFirst = NO;
   }
+    
+#pragma mark 视图将要出现的时候进行调用
   self.navigationItem.titleView=[Tools getTtileViewWithTitle:self.typeName andPositionOffset:110.f];
+    //+(UIView *)getTtileViewWithTitle:(NSString *)title andPositionOffset:(CGFloat)offset
+    //让那个标题自适应屏幕，可以自行居中
+}
+
+
+/**
+ *  @brief 刷新数据表
+ *
+ */
+- (void)refreshTable
+{
+    self.page=1;
+    [self.newsListArray removeAllObjects];
+    [self getResult];
+    
 }
 
 - (void)getResult
 {
-  NSString *url = [NSString stringWithString:requestURL(self.typeName, self.page, perPageNewsCount)];
+  NSString *url = [NSString stringWithString:requestURL(self.typeName, self.page, perPageNewsCount)];//新闻名字，第几页，每页的数量
   
-  debugLog(@"%@",url);
-  
+  debugLog(@"******%@",url);
+#pragma mark 有中文进行转义果然第一次遇见
   //因为url中有中文，这里进行一下url转义
   NSString *encodeURL = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-  
+    debugLog(@"/////%@",encodeURL);
   NSURL *requestUrl = [NSURL URLWithString:encodeURL];
   
   NSURLRequest *request = [NSURLRequest requestWithURL:requestUrl];
-  
-  //添加接收的格式支持，不然html头的json会报错
+#pragma mark 采用第三库的转化 1.下载AFNetworking资源包 https://github.com/AFNetworking/AFNetworking。
+ /*
+    2.将资源包添加到工程文件。
+    
+    3.在工程的Supporting File群组中打开预编译头文件XXX-Prefix.pch。然后在别的import后面添加如下一行代码#import “AFNetworking”
+    
+    将AFNetworking添加到预编译头文件，意味着这个框架会被自动的添加到工程的所有源代码文件中。
+    
+    4.AFNetworking通过网络来加载和处理结构化的数据非常明智，它支持JSON,XML,Property List。
+  //添加接收的格式支持，不然html头的json会报错*/
   [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
   
   AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSURLResponse *response, id JSON)
   {
+      //
+      NSDictionary*dicWeather = (NSDictionary *)JSON;
+      NSLog(@"result:****************%@",dicWeather);
     if (JSON)
     {
       self.count = [[JSON objectForKey:@"total"] intValue];
@@ -211,17 +239,6 @@
 
 #pragma mark  - pullRefreshTable methods
 
-/**
- *  @brief 刷新数据表
- *
- */
-- (void)refreshTable
-{
-  self.page=1;
-  [self.newsListArray removeAllObjects];
-  [self getResult];
-  
-}
 
 
 /**

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NewsTableViewController.h"
 #import "MLNavigationController.h"
-
+//导航控制视图的分析
 @interface NewsViewController : MLNavigationController
 
 @end

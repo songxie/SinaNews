@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) UIImageView *defaultBackView;
 
-@property (strong, nonatomic) UIImageView *hightedBackView;
+@property (strong, nonatomic) UIImageView *hightedBackView;//高亮的背景图片
 
 @end
 
@@ -61,7 +61,7 @@
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
 {
-  if ( highlighted)
+  if (highlighted)
   {
     self.backgroundView = self.hightedBackView;
     
@@ -69,7 +69,7 @@
   {
     self.backgroundView = self.defaultBackView;
   }
-  
+#warning 这种东西怎么进行理解呢
   //这个不能调用，调用了会使用selectedBackgroundView的背景作为高亮背景
 //  [super setHighlighted:highlighted animated:animated];
 }
