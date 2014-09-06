@@ -47,7 +47,7 @@
 - (void)stylePanel:(UIView *)panel {
   
 }
-
+#pragma mark 左边的按钮或者平板中心的按钮
 - (UIBarButtonItem *)leftButtonForCenterPanel {
   //显示左侧按钮
   UIButton *showLeftChanelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
