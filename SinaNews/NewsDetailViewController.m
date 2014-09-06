@@ -25,7 +25,7 @@
         // Custom initialization
       self.navigationItem.titleView=[Tools getTtileViewWithTitle:@"新闻详细" andPositionOffset:110.f];
       
-      //开始自定义返回按钮
+      //开始自定义返回按钮，自定义返回按钮，采用导航栏的左边按钮，添加一个定制的CustomView,在上面 - (id)initWithCustomView:(UIView *)customView;第一次遇见
       UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
       
       backButton.frame = CGRectMake(0, 0, 44, 44);

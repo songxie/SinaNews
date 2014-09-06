@@ -43,7 +43,7 @@
       //相当于内存的释放，创建成字典，接着创建对象包含一个字典
         catDic = nil;catObject = nil;
       }
-      
+      //图片的放大是在最后面进行放大的
       self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"leftchannel_bg@2x"]];
       
       //顶部背景

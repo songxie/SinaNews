@@ -10,6 +10,6 @@
 
 @interface NewsCategoryViewController : UIViewController
 
-@property (strong,nonatomic) NSMutableArray *categoryArray;
+@property (strong,nonatomic) NSMutableArray *categoryArray;//分类数组
 
 @end

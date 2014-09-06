@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // Custom initialization,没看到区别啊
       self.shouldDelegateAutorotateToVisiblePanel = NO;
       
       //设置左边panel的width
