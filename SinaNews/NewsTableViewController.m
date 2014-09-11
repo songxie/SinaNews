@@ -5,7 +5,8 @@
 //  Created by coly on 13-6-17.
 //  Copyright (c) 2013年 coly. All rights reserved.
 //
-
+/*http://qingbin.sinaapp.com/api/lists?ntype=图片&pageNo=1&pagePer=10&list.htm，解析出来东西
+ {"total":2772,"item":[{"id":"110396","title":"\u6559\u5e08\u5c06\u6bdb\u6cfd\u4e1c\u6c42\u5b66\u65f6\u81ea\u521b\u4f53\u64cd\u6539\u7f16\u4e3a\u5e7f\u573a\u821e","ntype":null,"addtime":null,"thumb":"http:\/\/img5.cache.netease.com\/photo\/0001\/2014-06-15\/900x600_9UQ691V900AP0001.jpg"},{"id":"110379","title":"\u72f1\u8b66\u4eec\u7684\u7236\u4eb2\u8282","ntype":null,"addtime":null,"thumb":"http:\/\/img5.cache.netease.com\/photo\/0001\/2014-06-15\/900x600_9UPQFKUI57KT0001.JPG"},{"id":"110353","title":"\u8d70\u8fdb\u65e5\u672c\u9189\u6c49\u7684\u4e16\u754c \u65e5\u672c\u5de5\u85aa\u65cf\u751f\u6d3b\u53e6\u4e00\u9762","ntype":null,"addtime":null,"thumb":"http:\/\/img4.cache.netease.com\/photo\/0001\/2014-06-15\/900x600_9UPE5V944T8F0001.jpg"},{"id":"110352","title":"\u5317\u4eac\u5e7c\u513f\u56ed\u62db\u751f \u8001\u4eba\u51cc\u6668\u6392\u961f\u7b49\u62a5\u540d","ntype":null,"addtime":null,"thumb":"http:\/\/img6.cache.netease.com\/photo\/0001\/2014-06-15\/900x600_9UPDSO5500AP0001.jpg"},{"id":"110354","title":"1600\u53ea\u7eb8\u718a\u732b\u73af\u6e38\u4e16\u754c \u547c\u5401\u4fdd\u62a4\u6fd2\u5371\u52a8\u7269","ntype":null,"addtime":null,"thumb":"http:\/\/img3.cache.netease.com\/photo\/0001\/2014-06-15\/900x600_9UPD9MMF4T8F0001.jpg"},{"id":"110355","title":"\u7f8e\u56fd18\u5c81\u5973\u5b69\u9177\u4f3c\u8fea\u58eb\u5c3c\u51b0\u96ea\u5973\u738b","ntype":null,"addtime":null,"thumb":"http:\/\/img3.cache.netease.com\/photo\/0001\/2014-06-15\/900x600_9UPD45IJ00AO0001.jpg"},{"id":"110356","title":"\u6614\u65e5\u4e16\u754c\u676f\u7403\u661f\u73b0\u72b6 \u5f88\u591a\u4ecd\u6d3b\u8dc3\u5728\u8db3\u575b","ntype":null,"addtime":null,"thumb":"http:\/\/img4.cache.netease.com\/photo\/0001\/2014-06-15\/900x600_9UPCU8V14T8F0001.jpg"},{"id":"110344","title":"\u4e2d\u56fd\u6d77\u519b\u8230\u961f\u62b5\u8fbe\u5173\u5c9b\u4e0e\u7f8e\u56fd\u6d77\u519b\u4f1a\u5408","ntype":null,"addtime":null,"thumb":"http:\/\/img3.cache.netease.com\/photo\/0001\/2014-06-15\/900x600_9UPAD2864T8E0001.jpg"},{"id":"110345","title":"\u4e4c\u514b\u5170\u4f0a\u5c14-76\u5760\u6bc1\u73b0\u573a\u66dd\u5149 \u9020\u621040\u4f1e\u5175\u6b7b\u4ea1","ntype":null,"addtime":null,"thumb":"http:\/\/img3.cache.netease.com\/photo\/0001\/2014-06-15\/900x600_9UPACH4Q56NT0001.jpg"},{"id":"110328","title":"\u4f26\u6566\u4e3e\u884c\u88f8\u9a91\u6d3b\u52a8 \u547c\u5401\u7eff\u8272\u51fa\u884c","ntype":null,"addtime":null,"thumb":"http:\/\/img6.cache.netease.com\/photo\/0001\/2014-06-15\/900x600_9UP6LF1G00AO0001.jpg"}]}*/
 #import "NewsTableViewController.h"
 #import "NewsCell.h"
 #import "AFJSONRequestOperation.h"
@@ -15,12 +16,11 @@
 #import "Tools.h"
 
 
-
+#warning 为什么用到这个东西呢
 @class PullTableView;
 
-
 @interface NewsTableViewController ()<UITableViewDataSource, UITableViewDelegate, PullTableViewDelegate>
-#pragma mark int 的类型采用assign
+#pragma mark int 和 布尔 的类型采用assign，NSString 的类型采用copy
 //当前页数
 @property (assign, nonatomic) int page;
 

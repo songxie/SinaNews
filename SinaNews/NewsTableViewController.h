@@ -11,13 +11,13 @@
 
 @interface NewsTableViewController : UITableViewController
 
-//新闻列表table，这个类继承UITabView
+//新闻列表table，这个类继承UITabView，采用第三方类库来进行书写的，值得看研究一下
 @property (retain, nonatomic) PullTableView *newsListTable;
 
 //保存新闻实体类的数组
 @property (strong, nonatomic) NSMutableArray *newsListArray;
 
-//分类名称,显示在导航栏的上面
+//分类名称,显示在导航栏的上面,明确我们点击进去是什么名字
 @property (strong, nonatomic) NSString *typeName;
 
 
