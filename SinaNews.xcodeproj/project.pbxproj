@@ -1856,6 +1856,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SinaNews/SinaNews-Prefix.pch";
 				INFOPLIST_FILE = "SinaNews/SinaNews-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "新浪新闻";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1868,6 +1869,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SinaNews/SinaNews-Prefix.pch";
 				INFOPLIST_FILE = "SinaNews/SinaNews-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "新浪新闻";
 				WRAPPER_EXTENSION = app;
 			};

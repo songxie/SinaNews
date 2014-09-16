@@ -2,9 +2,9 @@
 //  NewsTableViewController.h
 //  SinaNews
 //
-//  Created by coly on 13-6-17.
+//  Created by coly on 14-6-17.
 //  Copyright (c) 2013年 coly. All rights reserved.
-//
+//具体新闻的表视图，这个是采用上下来刷新来实现的
 
 #import <UIKit/UIKit.h>
 #import "PullTableView.h"

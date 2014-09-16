@@ -15,6 +15,7 @@
 +(UIView *)getTtileViewWithTitle:(NSString *)title andPositionOffset:(CGFloat)offset
 {
   UILabel *nameLabel = [[UILabel alloc] init];
+  //返回一个label,属于UIView这个东西
   //这里注意了，不要把width设置成屏幕的宽度，这样会导致无法自适应居中
   //随便设置一个值，系统都会自己居中的
   CGRect frame = CGRectMake(0, 0, kDeviceWidth, 44);

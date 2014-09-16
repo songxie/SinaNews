@@ -25,11 +25,12 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
       // Initialization code
-      //设置cell的长度和位置,注意，这个方法覆盖了默认方法
+      //设置cell的长度和位置,注意，这个方法覆盖了默认方法,只能理解为单元格会自己进行居中
       [self setFrame:self.bounds];
       //设置背景
       UIImage *centerImage = [UIImage imageNamed:@"feed_cell_bg@2x.png"];
       //拉伸图片背景，原来如此
+#pragma mark 拉伸图片的背景
       centerImage=[centerImage stretchableImageWithLeftCapWidth:15 topCapHeight:9];
       self.centerImageView = [[UIImageView alloc] initWithImage:centerImage];
       self.backgroundView = self.centerImageView;
@@ -54,6 +55,7 @@
       self.newsTitle.numberOfLines = 0;
       self.newsTitle.text = @"北京天文馆朱金表示，神十将在明晚7时左右过境北京，天文爱好者可以观看";
       self.newsTitle.textColor = lightGreyColor;
+        //段落的样式
       self.newsTitle.lineBreakMode = NSLineBreakByWordWrapping;
       self.newsTitle.text = [self.newsTitle.text substringToIndex:21];
       self.newsTitle.text = [NSString stringWithFormat:@"%@ .....",self.newsTitle.text];
@@ -69,6 +71,8 @@
       self.newsPublishDate.textColor = [UIColor grayColor];
       NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
       [dateFormatter setDateFormat:@"YY-MM-dd HH:mm"];
+      //  NSDateFormatter * df = [[NSDateFormatter alloc] init ];
+      //  [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
       self.newsPublishDate.text = [dateFormatter stringFromDate:[NSDate date]];
       self.newsPublishDate.backgroundColor = [UIColor clearColor];
       [self.contentView addSubview:self.newsPublishDate];
