@@ -2,7 +2,7 @@
 //  NewsCategoryViewController.m
 //  SinaNews
 //
-//  Created by coly on 13-8-6.
+//  Created by coly on 14-8-6.
 //  Copyright (c) 2013年 coly. All rights reserved.
 //
 
@@ -44,7 +44,6 @@
         //直接进行调用，并且直接进行赋值
         NewsCategoryObject *catObject = [[NewsCategoryObject alloc]initWithDictionary:catDic];
 #warning 关键的一步来处理，顺道进行赋值，对象累加命名可以重复的使用着
-          NSLog(@"%@%@",catObject.thumb,catObject.title);
         [self.categoryArray addObject:catObject];
       //相当于内存的释放，创建成字典，接着创建对象包含一个字典
         catDic = nil;catObject = nil;
@@ -92,7 +91,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSLog(@"%@",self.categoryArray);
 }
 
 - (void)didReceiveMemoryWarning

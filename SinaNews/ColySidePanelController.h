@@ -2,7 +2,7 @@
 //  ColySidePanelController.h
 //  SinaNews
 //
-//  Created by coly on 13-8-10.
+//  Created by coly on 14-8-10.
 //  Copyright (c) 2013年 coly. All rights reserved.
 //
 

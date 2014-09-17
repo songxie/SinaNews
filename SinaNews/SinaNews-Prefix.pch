@@ -31,12 +31,12 @@
 #define lightGreyColor [UIColor colorWithRed:80.0f/255.0f green:80.0f/255.0f  blue:80.0f/255.0f  alpha:1.0f]
 
 #define cccColor [UIColor colorWithRed:236.0/255.0f green:238.0/255.0f blue:239.0/255.0f alpha:1.0f]
-
+//总的数据源
 #define requestURL(typeName,pageNo,pagePer) [NSString stringWithFormat:@"http://qingbin.sinaapp.com/api/lists?ntype=%@&pageNo=%d&pagePer=%d&list.htm",typeName,pageNo,pagePer]
 
 #define defaultTypeName @"图片"
 
-
+//传值过来的id,具体的详细新闻信息
 #define newDetailURL(id) [NSString stringWithFormat:@"http://qingbin.sinaapp.com/api/html/%d.html",id]
 
 
