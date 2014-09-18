@@ -29,7 +29,7 @@
   self.mainViewController.leftPanel = [[NewsCategoryViewController alloc] init];
     
     
-#pragma mark 中心新闻控制器的产生，就是具体的新闻列表外带UITabView的这类的东西，NewTableViewController
+#pragma mark 中心新闻控制器的产生，就是具体的新闻列表外带UITabView的这类的东西，NewTableViewController，先添加导航栏控制器，在添加新闻类的控制器
     //初始化新闻列表table,什么国际，社会，评论之类的来着，进行加装或者说是初始化
     NewsTableViewController *table = [[NewsTableViewController alloc] initWithStyle:UITableViewStylePlain];
     

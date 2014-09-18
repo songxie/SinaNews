@@ -4,7 +4,8 @@
 //
 //  Created by coly on 14-8-10.
 //  Copyright (c) 2013年 coly. All rights reserved.
-//
+////左边视图控制器跟按钮的结合
+
 
 #import "ColySidePanelController.h"
 
@@ -47,9 +48,9 @@
 - (void)stylePanel:(UIView *)panel {
   
 }
-#pragma mark 左边的按钮或者平板中心的按钮
+#pragma mark 左边的按钮或者平板中心的按钮，按钮的定制
 - (UIBarButtonItem *)leftButtonForCenterPanel {
-  //显示左侧按钮
+  //显示左侧按钮（导航栏的左侧按钮）
   UIButton *showLeftChanelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
   
   showLeftChanelBtn.frame = CGRectMake(0, 0, 44, 44);

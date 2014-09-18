@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C95EAFE419C98C2A00CA105A /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95EAFE319C98C2900CA105A /* Empty.xib */; };
 		CE36E26A17B225D3006BD19A /* NewsCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE36E26917B225D3006BD19A /* NewsCategoryCell.m */; };
 		CE36E26E17B22F14006BD19A /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE36E26C17B22F12006BD19A /* NewsDetailViewController.m */; };
 		CE36E26F17B22F14006BD19A /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE36E26D17B22F12006BD19A /* NewsDetailViewController.xib */; };
@@ -367,6 +368,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C95EAFE319C98C2900CA105A /* Empty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 		CE36E26817B225D3006BD19A /* NewsCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCategoryCell.h; sourceTree = "<group>"; };
 		CE36E26917B225D3006BD19A /* NewsCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCategoryCell.m; sourceTree = "<group>"; };
 		CE36E26B17B22F11006BD19A /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
@@ -784,6 +786,8 @@
 			children = (
 				CE7DE28B176EF27500996FD6 /* NewsViewController.h */,
 				CE7DE28C176EF27500996FD6 /* NewsViewController.m */,
+				E3BBC1D517B55541006886CF /* ColySidePanelController.h */,
+				E3BBC1D617B55541006886CF /* ColySidePanelController.m */,
 				CE7DE290176EF9C200996FD6 /* NewsTableViewController.h */,
 				CE7DE291176EF9C200996FD6 /* NewsTableViewController.m */,
 				E3D4A52117B148DF00DBF94F /* NewsCategoryViewController.h */,
@@ -792,8 +796,6 @@
 				CE36E26B17B22F11006BD19A /* NewsDetailViewController.h */,
 				CE36E26C17B22F12006BD19A /* NewsDetailViewController.m */,
 				CE36E26D17B22F12006BD19A /* NewsDetailViewController.xib */,
-				E3BBC1D517B55541006886CF /* ColySidePanelController.h */,
-				E3BBC1D617B55541006886CF /* ColySidePanelController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -847,6 +849,7 @@
 		CEA7B63B176B148600DB68D7 = {
 			isa = PBXGroup;
 			children = (
+				C95EAFE319C98C2900CA105A /* Empty.xib */,
 				CEFBAEEE17A65A530033B5E4 /* Default-568h@2x.png */,
 				CEFBAEEC17A65A4E0033B5E4 /* Default@2x.png */,
 				CEFBAEEA17A65A490033B5E4 /* Default.png */,
@@ -1687,6 +1690,7 @@
 				CEEA0B601797B98E0061C322 /* whiteArrow.png in Resources */,
 				CEEA0B611797B98E0061C322 /* whiteArrow@2x.png in Resources */,
 				CEFBAEEB17A65A490033B5E4 /* Default.png in Resources */,
+				C95EAFE419C98C2A00CA105A /* Empty.xib in Resources */,
 				CEFBAEED17A65A4E0033B5E4 /* Default@2x.png in Resources */,
 				CEFBAEEF17A65A530033B5E4 /* Default-568h@2x.png in Resources */,
 				E397F6E117A6B1D200C54A51 /* PullTableViewLan.strings in Resources */,
